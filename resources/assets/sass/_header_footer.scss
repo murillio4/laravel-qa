@@ -1,0 +1,179 @@
+@mixin display {
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flow {
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+}
+
+@mixin content {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+@mixin align {
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+@mixin header_hoover {
+    &:hover {
+        background-color: $navigation-hover-bg;
+        color: $text-color;
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+.header {
+    border-top: 3px solid $orange-border-color;
+    box-shadow: 0 1px 0 rgba(12,13,14,0.15), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: $min-width;
+    z-index: 1050;
+    background-color: $navbar-default-bg;
+    transition: box-shadow cubic-bezier(.165, .84, .44, 1) .25s;
+    height: $navbar-height;
+    box-sizing: border-box;
+
+    &.fixed {
+        position: fixed;
+        min-width: auto;
+    }
+
+    .-container {
+        max-width: $min-width;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 15px;
+        box-sizing: content-box;
+
+        @include display;
+        @include flow;
+        @include content;
+        @include align;
+    }
+
+    .-main {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+
+        @include display;
+        @include flow;
+        @include align;
+
+        .-logo {
+            box-sizing: content-box;
+            padding: 0 5px;
+            height: 57px;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            background-color: transparent;
+            transition: background-color cubic-bezier(.165, .84, .44, 1) .25s;
+
+            .-img {
+                display: inline-block;
+                height: 45px;
+                width: 45px;
+                margin-top: 0;
+                margin-left: 0;
+            }
+
+            @include header_hoover;
+        }
+
+        .navigation {
+            float: left;
+            font-size: 14px;
+            max-width: $min-width-navigation;
+            overflow: hidden;
+            opacity: 1;
+            transform-origin: left center;
+            transition: opacity .35s cubic-bezier(.165, .84, .44, 1),max-width .5s cubic-bezier(.165, .84, .44, 1);
+
+            .-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+                height: 57px;
+
+                .-item {
+                    .-link {
+                        display: inline-block;
+                        padding: 0 12px;
+                        color: $navigation-text-color;
+                        line-height: 58px;
+                        text-decoration: none;
+                        height: 57px;
+                        white-space: nowrap;
+                        position: relative;
+                        transition: background-color cubic-bezier(.165, .84, .44, 1) .25s,border-bottom-color ease-in-out .25s;
+
+                        @include header_hoover;
+                    }
+
+                    &.active .-link {
+                        border-bottom: 2px solid $orange-border-color;
+                        color: #0C0D0E;
+                    }
+                }
+            }
+        }
+
+        .searchbar {
+            padding-left: 12px;
+            width: 100%;
+            position: relative;
+            -webkit-flex: 1;
+            flex: 1;
+
+            .stylish-input-group .input-group-addon{
+                background: white !important;
+            }
+            .stylish-input-group .form-control{
+                border-right:0;
+                box-shadow:0 0 0;
+            }
+            .stylish-input-group button{
+                border:0;
+                background:transparent;
+            }
+        }
+    }
+
+    .-actions {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        margin-left: 48px;
+        -webkit-flex: 1 0 auto;
+        flex: 1 0 auto;
+    }
+}
+
+
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    min-width: $min-width;
+    min-height: $navbar-height/2;
+    background-color: $footer-bg;
+    font-size: $footer-font-size;
+    line-height: $footer-line-height;
+}

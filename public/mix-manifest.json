@@ -1,0 +1,12 @@
+{
+    "/js/bootstrap.js": "/js/bootstrap.js",
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/semantic.min.css": "/css/semantic.min.css",
+    "/js/semantic.min.js": "/js/semantic.min.js",
+    "/css/bootstrap-tokenfield.css": "/css/bootstrap-tokenfield.css",
+    "/js/bootstrap-tokenfield.min.js": "/js/bootstrap-tokenfield.min.js",
+    "/css/prism.css": "/css/prism.css",
+    "/js/prism.min.js": "/js/prism.min.js",
+    "/js/tinymce.min.js": "/js/tinymce.min.js"
+}

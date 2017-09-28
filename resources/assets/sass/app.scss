@@ -1,0 +1,108 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
+sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+    height: 100%;
+    min-width: $min-width;
+}
+
+body {
+    min-height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    font-family: $font-family-arial;
+    font-size: $font-size-base;
+    line-height: $line-height;
+    color: $text-color;
+    background: $body-bg;
+    min-width: $min-width;
+}
+
+a {
+    color: $a-color;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+        color: #3af;
+    }
+}
+
+@import "header_footer";
+
+
+.container {
+    position: relative;
+    width: 100%;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin: 0 auto;
+    text-align: left;
+
+    .header.fixed ~ & {
+        padding-top: $navbar-height;
+    }
+}
+
+#content {
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 15px;
+    width: $min-width;
+    min-height: $min-content-height;
+    background-color: $body-bg;
+
+    .header ~ .container & {
+        padding: 24px 15px;
+    }
+
+    #main {
+        float: left;
+        width: 728px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #sidebar {
+        float: right;
+        overflow: hidden;
+        width: 300px;
+        margin: 0 0 15px;
+    }
+}
+
+.ask {
+    padding-left: 10px;
+
+}
+
+@import "title_tabs"

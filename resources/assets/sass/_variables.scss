@@ -1,0 +1,51 @@
+
+// Html
+$min-width: 1060px;
+$min-content-height: 450px;
+
+// Body
+$body-bg: #FFF;
+
+// Footer
+$footer-bg: #242729;
+$footer-line-height: 1.26px;
+$footer-font-size: 12px;
+
+// Borders
+$default-border-color: #e4e6e8;
+$orange-border-color: #309CF9; //#F48024;
+
+// Brands
+$brand-primary: #3097D1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #bf5329;
+
+// Typography
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-arial: Arial,"Helvetica Neue",Helvetica,sans-serif;
+$font-size-base: 14px;
+$font-size-sub: 12px;
+$line-height: 1.3em;
+$text-color: #242729;
+$a-color: #07C;
+$sub-text-color: #848d95;
+
+// Navbar
+$navbar-default-bg: #fafafb;
+$navbar-height: 60px;
+$min-width-navigation: 450px;
+$navigation-text-color: #535a60;
+$navigation-hover-bg: #eff0f1;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+// $input-border: lighten($text-color, 40%);
+// $input-border-focus: lighten($brand-primary, 25%);
+// $input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;

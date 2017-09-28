@@ -1,0 +1,84 @@
+.subheader {
+    clear: both;
+    margin-bottom: 10px;
+    height: 40px;
+    border-bottom: 1px solid $default-border-color;
+
+    h1, h2 {
+        float: left;
+        margin-bottom: 0;
+        font-weight: normal;
+    }
+
+    h1 {
+        color: $text-color;
+        font-size: 18px;
+        line-height: 2.22;
+    }
+
+}
+
+.tabs {
+    float: right;
+
+    a {
+        position: relative;
+        float: left;
+        margin-right: 8px;
+        padding: 12px 10px;
+        color: $sub-text-color;
+        background-color: $body-bg;
+        font-size: $font-size-sub;
+        line-height: 1;
+        text-decoration: none;
+        border: 1px solid transparent;
+        transition: all .15s ease-in-out;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            height: 2px;
+            background-color: transparent;
+        }
+
+        @include header_hoover;
+    }
+
+    .youarehere {
+        padding-bottom: 14px;
+        color: $text-color;
+        font-weight: 400;
+        border-color: $default-border-color;
+        border-bottom-color: transparent;
+
+        &:before {
+            background-color: $orange-border-color;
+        }
+    }
+}
+
+.question-header{
+    clear: both;
+    margin-bottom: 1em;
+    padding: 5px 0;
+    border-bottom: 1px solid  $default-border-color;
+
+    @include display;
+    @include flow;
+    @include content;
+
+    h1 {
+        margin-bottom: .5em;
+    }
+
+    .question-hyperlink {
+        font-size: 24px;
+        line-height: 1.35;
+        font-weight: normal;
+        margin-bottom: .5em;
+        color: $text-color;
+    }
+}
